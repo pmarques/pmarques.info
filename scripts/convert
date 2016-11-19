@@ -1,0 +1,19 @@
+#/usr/bin/env bash
+
+# Requirements:
+# * Debian/Ubuntu
+#   - apt-get install imagemagick webp
+
+ASSETS_PATH="$(dirname $(perl -e 'use Cwd qw/abs_path/; print abs_path($ARGV[0]);' $0))/../assets"
+pushd ${ASSETS_PATH}
+
+convert -resize 1440x bg.jpg bg_1440.jpg
+convert -resize 1024x bg.jpg bg_1024.jpg
+convert -resize 768x  bg.jpg bg_768.jpg
+convert bg_1440.jpg -define webp:lossless=true  bg_1440.webp
+convert bg_1024.jpg -define webp:lossless=true  bg_1024.webp
+convert bg_768.jpg -define webp:lossless=true  bg_768.webp
+
+popd
+
+# vim:ft=sh

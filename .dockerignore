@@ -4,4 +4,5 @@ Dockerfile
 .gitignore
 README.md
 CHANGELOG.md
+scripts
 .DS_Store
