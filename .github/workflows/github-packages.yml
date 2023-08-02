@@ -7,7 +7,7 @@ on:
   push:
     branches:
       - '*'
-      - '!master'
+      - '!production'
 
 jobs:
   gh_container_registry:
