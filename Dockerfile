@@ -1,4 +1,4 @@
-FROM nginx:1.31.1-alpine-slim
+FROM nginx:1.31.2-alpine-slim
 
 MAINTAINER Patrick F. Marques <patrickfmarques@gmail.com>
 
